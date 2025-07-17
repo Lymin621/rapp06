@@ -1,6 +1,6 @@
 import React from "react";
 
-function TodoItem({id, content, isDone, createDate, onUpdate, onDelete}){
+function TodoItem({id, content, isDone, createDate, onUpdate , onDelete}){
     //체크박스 체크 여부에 따라 상태 변경하기
     const onChangeCheckbox = () => {
         onUpdate(id);
@@ -10,18 +10,18 @@ function TodoItem({id, content, isDone, createDate, onUpdate, onDelete}){
     const onClickDelete = () => {
         onDelete(id);
     };
-    return(
+    return (
         <React.Fragment>
-            <div className = "TI_wrap">
+            <div className="TI_ancestor">
                 <input
-                type = "checkbox"
+                type="checkbox"
                 onChange={onChangeCheckbox}
                 checked={isDone}
                 />
                 <span>{content}</span>
                 <span>{new Date(createDate).toDateString()}</span>
                 <button
-                type = "button"
+                type="button"
                 className="TI_deleteBtn"
                 onClick={onClickDelete}
                 >삭제</button>

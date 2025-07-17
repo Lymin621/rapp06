@@ -4,27 +4,27 @@ import { Header, TodoEditor, TodoList } from './component';
 import './css/commons.css';
 
 
-const mockTodo = [];
-// const mockTodo = [
-//   {
-//     id : 0,
-//     isDone : false,
-//     content : "React 공부하기",
-//     createDate : new Date().getTime(),
-//   },
-//   {
-//     id : 1,
-//     isDone : false,
-//     content : "빨래 널기",
-//     createDate : new Date().getTime(),
-//   },
-//   {
-//     id : 2,
-//     isDone : false,
-//     content : "책 읽기",
-//     createDate : new Date().getTime(),
-//   }, 
-// ];
+// const mockTodo = [];
+const mockTodo = [
+  {
+    id : 0,
+    isDone : false,
+    content : "React 공부하기",
+    createDate : new Date().getTime(),
+  },
+  {
+    id : 1,
+    isDone : false,
+    content : "빨래 널기",
+    createDate : new Date().getTime(),
+  },
+  {
+    id : 2,
+    isDone : false,
+    content : "책 읽기",
+    createDate : new Date().getTime(),
+  }, 
+];
 
 function App() {
   const idRef = useRef(3);
